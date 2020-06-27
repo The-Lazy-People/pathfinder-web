@@ -7,7 +7,7 @@ import Header from "./../utils/header";
 import "./../utils/bootstrap.min.css";
 import "./pathfinderVisualiser.css";
 
-const SIZE_OF_BOARD = 20;
+const SIZE_OF_BOARD = 22;
 const CELL_COLOR = "#778899";
 const CELL_CORNER_BORDER_RADIUS = 3;
 
