@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+@keyframes popupBlock {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+:root {
+    --p-grid-cols: 1;
+    --p-grid-rows: 1;
+}
+
+* {
+    font-family: "Open Sans", sans-serif;
+}
+
+body {
+    background-color: #f0f0f0;
+}
+
+.rounded-b {
+    border-radius: 5px;
+}
+
+.pBox {
+    display: grid;
+    grid-gap: 0 0;
+    padding: 10px;
+    border-radius: 3px;
+    background-color: #fff;
+    grid-template-rows: repeat(var(--p-grid-rows), 1fr);
+    grid-template-columns: repeat(var(--p-grid-cols), 1fr);
+}
+
+.shadowT {
+    box-shadow: 0 0.5px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.p-grid-item {
+    padding-top: 100%;
+    text-align: center;
+    margin: 0.5px;
+}
+
+.popupBlocks {
+    animation-name: popupBlock;
+    animation-timing-function: ease-in;
+    animation-duration: 400ms;
+    animation-delay: 400ms;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+    transform-origin: center;
+    transform-box: fill-box;
+}
