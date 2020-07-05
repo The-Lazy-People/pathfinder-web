@@ -1,0 +1,100 @@
+:root {
+    --p-grid-cols: 1;
+    --p-grid-rows: 1;
+}
+
+@keyframes popIn {
+    0% {
+        transform: scale3d(0.7, 0.7, 0.7);
+    }
+    100% {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+.grid {
+    display: grid;
+    grid-gap: 0 0;
+    padding: 7px;
+    border-radius: 3px;
+    background-color: #5d6d7e;
+    grid-template-rows: repeat(var(--p-grid-rows), 1fr);
+    grid-template-columns: repeat(var(--p-grid-cols), 1fr);
+    box-shadow: 0 0.5px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.iso {
+    transform: rotateX(60deg) rotateY(0deg) rotateZ(-45deg);
+    margin-left: 50px;
+}
+
+.node {
+    padding-top: 100%;
+    text-align: center;
+    margin: 0.5px;
+    background-color: #85929e;
+}
+
+.node-start {
+    background-color: #f81245;
+    transition: ease-in-out 200ms;
+    animation: popIn 200ms;
+    animation-delay: 25ms;
+    animation-timing-function: ease-in-out;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+.node-finish {
+    background-color: #12f893;
+    transition: ease-in-out 200ms;
+    animation: popIn 200ms;
+    animation-delay: 25ms;
+    animation-timing-function: ease-in-out;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+.node-wall {
+    background-color: #e5e8e8;
+    transition: ease-in-out 200ms;
+    animation: popIn 200ms;
+    animation-delay: 25ms;
+    animation-timing-function: ease-in-out;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+.node-shortest-path {
+    background-color: yellow;
+    transition: ease-in-out 200ms;
+    animation: popIn 200ms;
+    animation-delay: 25ms;
+    animation-timing-function: ease-in-out;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+.node-visited {
+    background-color: #2a80fa;
+    transition: ease-in-out 200ms;
+    animation: popIn 200ms;
+    animation-delay: 25ms;
+    animation-timing-function: ease-in-out;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+.bg-start {
+    background-color: #f81245 !important;
+    color: white !important;
+}
+.bg-end {
+    background-color: #12f893 !important;
+    color: black !important;
+}
+.bg-wall {
+    background-color: #e5e8e8 !important;
+    color: black !important;
+}

@@ -3,6 +3,9 @@ import "./App.css";
 
 import PathFinderVisualiser from "./pathFinderVisualiser/pathfinderVisualiser";
 
+//Stylesheets
+import "./utils/bootstrap.min.css";
+
 function App() {
     return (
         <div className="App">
